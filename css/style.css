@@ -225,3 +225,81 @@ footer {
     content: \00A9;
     font-size: 16px; 
 }
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('img/b.png');
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#popup {
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#popup h2 {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+input {
+    height: 55px;
+    width: 265px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(164, 171, 190);
+    text-align: start;
+}
+.contain {
+    height: 55px;
+    width: 265px;
+    position: relative;
+    padding-left: 6px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color:   rgb(255, 78, 46);
+}
+.contain p{
+    width: 245px;
+    margin-left: 30px;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+.contain input:checked ~ .checkmark {
+    background-color:  #eee;
+    border: 0.5px solid rgb(255, 78, 46);
+}
+.contain .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 15px;
+    height: 15px;  
+}
+  
