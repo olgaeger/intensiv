@@ -10,22 +10,23 @@
 		<div id="popupContainer">
 			<div id="popup">
 				<h2>Форма заявки</h2>
-				<input type="text" name="username" placeholder="  Имя">
-				<input type="text" name="phonenumber" placeholder="  Телефон">
-				<button class="orange" style="margin-bottom: 0;">Заказать проект</button>
+				<input type="text" id="username" required placeholder="Имя">
+				<input type="number" id="phonenumber" required placeholder="Телефон">
+				<button type="submit" class="orange" style="margin-bottom: 0;">Заказать проект</button>
 				<lable class="contain"> 
 					<p>Я согласен с условиями обработки<br> персональных данных</p>
-					<input type="checkbox" name="conditions" value="" checked> 
-					<span class="checkmark">&#10004</span>
+					<input type="checkbox" id="checkbx" required value="checkbox"> 
+					<span class="checkmark" id="bird">&#10004</span>
+					<span class="checkmark" id="empty"></span>
 				</lable>
 			</div>
 		</div>
 		<header>
 			<div class="fixed-width">
 				<nav>
-					<a href="#">Услуги</a>
-					<a href="#">Портфолио</a>
-					<a href="#">Стоимость</a>
+					<a href="#skills">Услуги</a>
+					<a href="#examples">Портфолио</a>
+					<a id="price">Стоимость</a>
 				</nav>
 				<div id="contact-container">
 					<span id="phone">+7 (495) 999-55-77</span>
@@ -44,7 +45,7 @@
 			</div>
 		</section>
 		<div class="skills">
-			<h2>Что я делаю</h2>
+			<a name="skills"><h2>Что я делаю</h2></a>
 			<div class="row">
 				<div class="offers">
 					<img class="icons" src="css/img/icons/tools-and-utensils.png">
@@ -66,7 +67,7 @@
 			<button class="orange">Узнать стоимость</button>
 		</div>
 		<div class="examples">
-			<h2>Примеры моих работ</h2>
+			<a name="examples"><h2>Примеры моих работ</h2></a>
 			<div class="row">
 				<div class="offers">
 					<img class="works" src="css/img/Portfolio_1.png">
@@ -90,30 +91,36 @@
 		<div class="contacts">
 			<div class="menu">
 				<p>
-					Услуги
+					<a href="#skills">Услуги</a>
 					<br>
+					<a href="#examples">Портфолио</a>
 					<br>
-					Портфолио
-					<br>
-					<br>
-					Стоимость
+					<a id="priceend">Стоимость</a>
 				</p>
 			</div>
 			<div class="conection">
 				<p>
-					<img class="icons" src="css/img/icons/call-answer (1).png"> +7 (495) 999-55-77
+					<img class="icons" src="css/img/icons/call-answer (1).png" style="width: 18px; height: 18px;"> +7 (495) 999-55-77
 					<br>
 					<br>
-					<img class="icons" src="css/img/icons/envelope (1).png" style="width: 30px;"> dmitry@alekseev.com
+					<img class="icons" src="css/img/icons/envelope (1).png" style="width: 20px; height: 15px;"> dmitry@alekseev.com
 				</p>
 			</div>
 			<div class="social">
 					<button class="call">Заказать звонок</button>
 					<div class="soci">
-						<img class="icons" src="css/img/icons/vk (1).png" style="width: 35px;">
-						<img class="icons" src="css/img/icons/facebook-logo (1).png" style="height: 30px; width: 15px; margin-top: -5px;">
-						<img class="icons" src="css/img/icons/twitter-logo-silhouette.png">
-						<img class="icons" src="css/img/icons/instagram-social-network-logo-of-photo-camera.png">
+						<a href="https://vk.com/">
+							<img class="icons" src="css/img/icons/vk (1).png" style="height: 22px; width: 35px;">
+						</a>
+						<a href="https://www.facebook.com/">
+							<img class="icons" src="css/img/icons/facebook-logo (1).png" style="height: 30px; width: 15px; margin-top: -10px;">
+						</a>
+						<a href="https://twitter.com/">
+							<img class="icons" src="css/img/icons/twitter-logo-silhouette.png" style="width: 30px; height: 25px;">
+						</a>
+						<a href="https://www.instagram.com/">
+							<img class="icons" src="css/img/icons/instagram-social-network-logo-of-photo-camera.png" style="width: 23px; height: 25px;">
+						</a>
 					</div>
 			</div>
 		</div>
@@ -124,7 +131,68 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
+				$('#checkbx').click(function(){
+					$("#bird").css('display', 'flex');
+				});
+				
+				$('#empty').click(function(event){
+					if(event.target === this){
+						$('#empty').css('display', 'none');
+					}
+				});
+
+				$('#bird').click(function(event){
+					if(event.target === this){
+						$('#empty').css('display', 'flex');
+					}
+				});
+			});
+			$(function() {
 				$('#orderCall').click(function(){
+					$("#popupContainer").css('display', 'flex');
+				});
+				
+				$('#popupContainer').click(function(event){
+					if(event.target === this){
+						$('#popupContainer').css('display', 'none');
+					}
+				});
+			});
+			$(function() {
+				$('.orange').click(function(){
+					$("#popupContainer").css('display', 'flex');
+				});
+				
+				$('#popupContainer').click(function(event){
+					if(event.target === this){
+						$('#popupContainer').css('display', 'none');
+					}
+				});
+			});
+			$(function() {
+				$('.call').click(function(){
+					$("#popupContainer").css('display', 'flex');
+				});
+				
+				$('#popupContainer').click(function(event){
+					if(event.target === this){
+						$('#popupContainer').css('display', 'none');
+					}
+				});
+			});
+			$(function() {
+				$('#price').click(function(){
+					$("#popupContainer").css('display', 'flex');
+				});
+				
+				$('#popupContainer').click(function(event){
+					if(event.target === this){
+						$('#popupContainer').css('display', 'none');
+					}
+				});
+			});
+			$(function() {
+				$('#priceend').click(function(){
 					$("#popupContainer").css('display', 'flex');
 				});
 				
