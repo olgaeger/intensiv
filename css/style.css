@@ -2,17 +2,24 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Arial;
-    width: 1900px;
 }
 header {
     background-color: #FBFBFB;
     height: 100px;
+    display: flex;
+    width: 100%;
+}
+.fixed-width {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
 }
 a {
     color: black;
     text-decoration: none;
     margin-right: 30px;
-    font-size: 16px;
 }
 header a:hover {
     color: rgb(252, 85, 124);
@@ -34,42 +41,49 @@ button {
 }
 #contact-container {
     height: 100%;
-    float: right;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-}
-.fixed-width {
-    width: 1130px;
-    margin: 0 auto;
-    padding: 0 30px;
-    height: 100%;
 }
 nav {
     height: 100%;
-    float: left;
     display: flex;
     align-items: center;
-
-}
-section{
-    background-color: #FBFBFB;
-    height: 667px;
 }
 .profile {
     margin: 0 auto;
     padding: 0 30px;
     height: 100%;
-    width: 1130px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+p {
+    color: rgb(164, 171, 190);
+    margin-bottom: 50px;
+}
+.photo {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('img/Dmitry.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+section{
+    background-color: #FBFBFB;
+}
 .card {
     height: 100%;
     background-color: #FBFBFB;
-    float: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,36 +98,17 @@ section{
     width: 270px;
     font-size: 18px;
 }
-h1 {
-    font-size: 80px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+h2 {
     font-weight: bold;
 }
-p {
-    color: rgb(164, 171, 190);
-    margin-bottom: 50px;
-    font-size: 25px;
-}
-.photo {
-    height: 100%;
-    flex: 1;
-    float: right;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-image: url('img/Dmitry.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: auto;
-    margin-right: -230px;
-} 
 .skills {
-    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.skills a{
+    margin-right: 0px;
 }
 .row {
     display: flex;
@@ -133,32 +128,19 @@ p {
     width: 80px;
     height: 75px;
 }
-h2 {
-    font-size: 50px;
-    font-weight: bold;
-}
-.offers p {
-    font-size: 20px;
-    margin-bottom: 35px;
-}
 .examples {
-    height: 860px;
     background-color: #FBFBFB;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 .examples h2 {
-    margin-top: 50px;
     margin-bottom: 0px;
 }
-.works {
-    width: 370px;
-    height: 290px;
+.examples a{
+    margin-right: 0px;
 }
 .marketing {
-    height: 365px;
     background-color: rgb(255, 78, 46);
     color: white;
     display: flex;
@@ -168,30 +150,22 @@ h2 {
 }
 .marketing p {
     color: white;
-    margin-right: 210px;
-    font-size: 19px;
     margin-top: 0px;
     margin-bottom: 50px;
 }
 .marketing h2 {
-    margin-left: 95px;
-    margin-top: 50px;
     margin-bottom: 0px;
 }
-.contacts {
-    height: 265px;
-    width: 1190px;
-    background-color: #FBFBFB;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 355px;
+.menu {
+    margin:0 50px;
 }
 .menu a {
     color: rgb(164, 171, 190);
     font-size: 18px;
     cursor: pointer;
+}
+.conection{
+    margin: 0 185px;
 }
 .conection p {
     color: black;
@@ -199,11 +173,19 @@ h2 {
 .conection img {
     margin-right: 10px;
 }
+.contacts {
+    width: 100%;
+    background-color: #FBFBFB;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .social {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin:0 50px;
 }
 .social button {
     margin-bottom: 35px;
@@ -211,8 +193,24 @@ h2 {
     padding-left: 65px;
     padding-right: 65px;
 }
+#vk {
+    height: 22px; 
+    width: 35px;
+}
+#fb {
+    height: 30px; 
+    width: 15px; 
+    margin-top: -10px;
+}
+#twit {
+    width: 30px; 
+    height: 25px;
+}
+#insta {
+    width: 23px; 
+    height: 25px;
+}
 footer {
-    height: 79px;
     background-color: rgb(49, 41, 60);
     display: flex;
     flex-direction: column;
@@ -220,7 +218,6 @@ footer {
     align-items: center;
     color: white;
     content: \00A9;
-    font-size: 16px; 
 }
 #popupContainer {
     display: none;
@@ -319,3 +316,576 @@ input {
     background-color: #eee;
     border: 0.5px solid rgb(255, 78, 46);
 }
+/* monitors and laptops */
+@media screen and (min-width: 1240px)  {
+    .fixed-width {
+        width: 1920px;
+        justify-content: flex-start;
+    }
+    nav{
+        margin-right: 321px;
+        margin-left: 30px;
+    }
+    section{
+        height: 670px;
+    }
+    .profile {
+        width: 1130px;
+    }
+    h1 {
+        font-size: 80px;
+    }
+    a {
+        font-size: 16px;
+    }
+    p {
+        font-size: 22px;
+    }
+    .photo {
+        margin-right: -230px;
+        background-size: auto;
+    } 
+    .skills {
+        height: 650px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    .offers p {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    .examples {
+        height: 860px;
+        justify-content: space-around;
+    }
+    .examples h2 {
+        margin-top: 0px;
+    }
+    .works {
+        width: 370px;
+        height: 290px;
+    }
+    .marketing {
+        height: 365px;
+    }
+    .marketing p {
+        margin-right: 185px;
+        font-size: 17px;
+    }
+    .marketing h2 {
+        margin-left: 95px;
+        margin-top: 50px;
+    }
+    .contacts {
+        height: 265px;
+        justify-content: center;
+    }
+    footer {
+        height: 79px;
+        font-size: 16px; 
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 1024px) and (max-width: 1240px)  {
+    header {
+        display: flex;
+    }
+    .fixed-width {
+        width: 1050px;
+        justify-content: space-evenly;
+    }
+    section{
+        height: 420px;
+    }
+    .profile {
+        width: 950px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    a {
+        font-size: 14px;
+    }
+    p {
+        font-size: 17px;
+    }
+    h2 {
+        font-size: 38px;
+    }
+    .orange {
+        margin-bottom: 0px;
+        height: 55px;
+        width: 245px;
+        font-size: 17px;
+    }
+    .photo {
+        margin-right: -75px;
+        background-size: cover;
+    }
+    .skills {
+        height: 495px;
+    }
+    .examples {
+        height: 660px;
+        justify-content: space-evenly;
+    }
+    .examples h2 {
+        margin: 0px;
+    }
+    .works {
+        width: 300px;
+        height: 220px;
+    }
+    .marketing {
+        height: 315px;
+    }
+    .marketing p{
+        margin-left: -125px;
+    }
+    .contacts {
+        height: 255px;
+        justify-content: center;
+    }
+    .conection{
+        margin: 0 110px;
+    }
+    footer {
+        height: 75px;
+        font-size: 15px; 
+    }
+    .social button{
+        width: 240px;
+        height: 45px;
+        font-size: 14px;
+    }
+    .conection p {
+        font-size: 16px;
+    }
+    .soci {
+        margin-left: 35px; 
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .fixed-width {
+        width: 850px;
+    }
+    a {
+        font-size: 12px;
+    }
+    #phone {
+        font-size: 20px;
+    }
+    section{
+        height: 425px;
+        display: flex;
+    }
+    .profile {
+        width: 1005px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .orange {
+        margin-bottom: 0px;
+        height: 45px;
+        width: 220px;
+        font-size: 15px;
+    }
+    .photo {
+        margin-right: -125px;
+        background-size: contain;
+    } 
+    .skills {
+        height: 450px;
+    }
+    .row {
+        justify-content: center;
+        width: 100%;
+    }
+    h2 {
+        font-size: 30px;
+        margin: 0px;
+    }
+    .offers {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .offers p {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    .examples {
+        height: 485px;
+        justify-content: space-evenly;
+    }
+    .examples h2 {
+        margin-top: -40px;
+    }
+    .works {
+        width: 240px;
+        height: 175px;
+    }
+    .marketing {
+        height: 300px;
+    }
+    .marketing p {
+        font-size: 15px;
+        margin-right: 30px;
+    }
+    .marketing h2 {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .contacts {
+        height: 245px;
+        justify-content: space-evenly;
+    }
+    footer {
+        height: 70px;
+        font-size: 14px; 
+    }
+    .menu {
+        margin:0 35px;
+    }
+    .menu a{
+        font-size: 14px;
+    }
+    .conection{
+        margin: 0 28px;
+    }
+    .social button{
+        width: 222px;
+        height: 45px;
+        font-size: 12px;
+    }
+    .soci {
+        margin-left: 25px; 
+    }
+}
+
+/* mobile */
+@media screen and (min-width: 585px) and (max-width: 768px) {
+    .fixed-width {
+        width: 700px;
+        flex-direction: column;
+    }
+    nav {
+        justify-content: center;
+    }
+    a {
+        font-size: 12px;
+    }
+    #phone {
+        font-size: 20px;
+    }
+    section{
+        height: 330px;
+        display: flex;
+    }
+    .profile {
+        width: 700px;
+        height: 300px;
+    }
+    .card {
+        justify-content: flex-end;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .orange {
+        margin-bottom: 30px;
+        height: 45px;
+        width: 220px;
+        font-size: 15px;
+    }
+    .photo {
+        margin-right: -85px;
+        background-size: contain;
+    } 
+    .skills {
+        height: 285px;
+    }
+    .row {
+        justify-content: center;
+        width: 100%;
+    }
+    h2 {
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+    .offers {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .icons {
+        width: 60px;
+        height: 55px;
+    }
+    .offers p {
+        font-size: 11px;
+        margin-bottom: 30px;
+    }
+    .examples {
+        height: 800px;
+        justify-content: space-evenly;
+    }
+    .examples h2 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .examples .row {
+        flex-direction: column;
+    }
+    .works {
+        width: 240px;
+        height: 175px;
+    }
+    .marketing {
+        height: 250px;
+    }
+    .marketing p {
+        font-size: 12px;
+        margin-right: 30px;
+    }
+    .marketing h2 {
+        font-size: 24px;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .contacts {
+        height: 240px;
+        margin-bottom: 25px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    footer {
+        height: 60px;
+        font-size: 12px; 
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 80px;
+    }
+    .menu a{
+        font-size: 14px;
+    }
+    .conection{
+        margin: 0 28px;
+    }
+    .social button{
+        width: 175px;
+        height: 70px;
+        font-size: 12px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        padding: 12px 40px 25px;
+    }
+    .soci {
+        margin-left: 30px;
+    }
+    #vk {
+        height: 15px;
+        width: 25px;
+    }
+    #fb {
+        height: 20px;
+        width: 10px;
+    }
+    #twit {
+        width: 20px;
+        height: 18px;
+    }
+    #insta {
+        width: 18px;
+        height: 18px;
+    }
+}    
+@media screen and (max-width: 585px){
+    header {
+        height: 110px;
+    }
+    .fixed-width {
+        width: 500px;
+        height: 80px;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        justify-content: center;
+        align-items: center;
+        margin-left: 45px;
+        margin-bottom: 40px;
+        margin-top: 15px;
+    }
+    #contact-container {
+        margin-right: 30px;
+        flex-direction: column;
+    }
+    a {
+        font-size: 12px;
+    }
+    #phone {
+        margin-bottom: 13px;
+        font-size: 18px;
+        margin-left: 25px;
+    }
+    #orderCall {
+        padding: 12px 40px 25px;
+        font-size: 13px;
+    }
+    section{
+        height: 210px;
+        display: flex;
+    }
+    .profile {
+        width: 505px;
+        height: 210px;
+    }
+    .card {
+        justify-content: center;
+        align-items: center;
+    }
+    .card .orange{
+        margin-bottom: 0px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .orange {
+        margin-bottom: 30px;
+        height: 45px;
+        width: 220px;
+        font-size: 13px;
+    }
+    .photo {
+        display: none;
+        margin-right: -85px;
+        background-size: contain;
+    } 
+    .skills {
+        height: 350px;
+        justify-content: space-evenly;
+    }
+    .skills .row{
+        flex-direction: column;
+    }
+    .skills .icons {
+        display: none;
+    }
+    .skills .orange {
+        width: 195px;
+        height: 60px;
+    }
+    .row {
+        justify-content: center;
+        width: 100%;
+    }
+    h2 {
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+    .offers {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .icons {
+        width: 60px;
+        height: 55px;
+    }
+    .offers p {
+        font-size: 11px;
+        margin-bottom: 30px;
+    }
+    .examples {
+        height: 800px;
+        justify-content: space-evenly;
+    }
+    .examples h2 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .examples .row {
+        flex-direction: column;
+    }
+    .examples .orange {
+        width: 190px;
+        height: 50px;
+    }
+    .works {
+        width: 240px;
+        height: 175px;
+    }
+    .marketing {
+        height: 200px;
+    }
+    .marketing p {
+        font-size: 9px;
+        margin-right: 45px;
+    }
+    .marketing h2 {
+        font-size: 19px;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .contacts {
+        height: 240px;
+        margin-bottom: 25px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .soci {
+        margin-left: 30px;
+    }
+    footer {
+        height: 50px;
+        font-size: 10px; 
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 90px;
+    }
+    .menu a{
+        font-size: 14px;
+    }
+    .conection{
+        margin: 0 28px;
+    }
+    .social button{
+        width: 175px;
+        height: 40px;
+        font-size: 12px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        padding: 12px 40px 25px;
+    }
+    #vk {
+        height: 15px;
+        width: 25px;
+    }
+    #fb {
+        height: 20px;
+        width: 10px;
+    }
+    #twit {
+        width: 20px;
+        height: 18px;
+    }
+    #insta {
+        width: 18px;
+        height: 18px;
+    }
+}    
