@@ -509,7 +509,6 @@ input {
     }
     h2 {
         font-size: 30px;
-        margin: 0px;
     }
     .offers {
         margin-left: 5px;
@@ -557,6 +556,9 @@ input {
     }
     .conection{
         margin: 0 28px;
+    }
+    .conection p {
+        font-size: 13px;
     }
     .social button{
         width: 222px;
