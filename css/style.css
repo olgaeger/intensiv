@@ -29,6 +29,8 @@ header a:hover {
 #phone {
     font-weight: bold;
     font-size: 22px;
+    height: 26px;
+    width: 189px;
 }
 button {
     border: 1px solid rgb(252, 85, 124);
@@ -320,7 +322,7 @@ input {
 @media screen and (min-width: 1240px)  {
     .fixed-width {
         width: 1920px;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
     nav{
         margin-right: 321px;
@@ -377,9 +379,15 @@ input {
         margin-left: 95px;
         margin-top: 50px;
     }
+    .contacts .menu {
+        margin-top: 25px;
+    }
     .contacts {
         height: 265px;
         justify-content: center;
+    }
+    .soci {
+        margin-left: 50px;
     }
     footer {
         height: 79px;
@@ -394,7 +402,10 @@ input {
     }
     .fixed-width {
         width: 1050px;
-        justify-content: space-evenly;
+        justify-content: space-between;
+    }
+    #contact-container {
+        margin-left: 0px;
     }
     section{
         height: 420px;
@@ -447,6 +458,9 @@ input {
     .contacts {
         height: 255px;
         justify-content: center;
+    }
+    .contacts .menu{
+        margin-top: 35px;
     }
     .conection{
         margin: 0 110px;
@@ -507,11 +521,18 @@ input {
         justify-content: center;
         width: 100%;
     }
+    .offers .icons{
+        height: 90px;
+        width: 100px;
+    }
     h2 {
         font-size: 30px;
     }
     .offers {
         margin-left: 5px;
+        margin-right: 50px;
+    }
+    .offers:last-child{
         margin-right: 5px;
     }
     .offers p {
@@ -550,6 +571,7 @@ input {
     }
     .menu {
         margin:0 35px;
+        margin-top: 35px;
     }
     .menu a{
         font-size: 14px;
@@ -566,7 +588,7 @@ input {
         font-size: 12px;
     }
     .soci {
-        margin-left: 25px; 
+        margin-left: 45px; 
     }
 }
 
@@ -668,6 +690,12 @@ input {
         flex-direction: column;
         justify-content: space-evenly;
     }
+    .conection{
+        margin: -40px 28px 0;
+    }
+    .social{
+        height: 60px;
+    }
     footer {
         height: 60px;
         font-size: 12px; 
@@ -676,6 +704,7 @@ input {
         display: flex;
         flex-direction: row;
         margin-left: 80px;
+        height: 60px;
     }
     .menu a{
         font-size: 14px;
@@ -685,14 +714,19 @@ input {
     }
     .social button{
         width: 175px;
-        height: 70px;
+        height: 60px;
         font-size: 12px;
         margin-left: 0px;
-        margin-bottom: 20px;
-        padding: 12px 40px 25px;
+        margin-bottom: 10px;
+        margin-top: -20px;
+        padding: 0 12px;
+    }
+    .call {
+        height: 60px;
     }
     .soci {
         margin-left: 30px;
+        margin-top: 15px;
     }
     #vk {
         height: 15px;
@@ -722,14 +756,11 @@ input {
         align-items: center;
     }
     nav {
-        justify-content: center;
-        align-items: center;
-        margin-left: 45px;
-        margin-bottom: 40px;
-        margin-top: 15px;
+        display: none;
     }
     #contact-container {
         margin-right: 30px;
+        margin-top: 30px;
         flex-direction: column;
     }
     a {
@@ -738,10 +769,13 @@ input {
     #phone {
         margin-bottom: 13px;
         font-size: 18px;
-        margin-left: 25px;
+        margin-left: 65px;
     }
     #orderCall {
-        padding: 12px 40px 25px;
+        padding: 0px;
+        height: 50px;
+        width: 160px;
+        vertical-align: middle;
         font-size: 13px;
     }
     section{
@@ -814,6 +848,7 @@ input {
     .examples {
         height: 800px;
         justify-content: space-evenly;
+        margin-top: 20px;
     }
     .examples h2 {
         margin-top: 0px;
@@ -859,20 +894,21 @@ input {
         display: flex;
         flex-direction: row;
         margin-left: 90px;
+        margin-top: 20px;
     }
     .menu a{
         font-size: 14px;
     }
     .conection{
-        margin: 0 28px;
+        margin: 0px 28px;
     }
     .social button{
         width: 175px;
-        height: 40px;
+        height: 50px;
         font-size: 12px;
-        margin-left: 0px;
+        margin: 0px;
         margin-bottom: 20px;
-        padding: 12px 40px 25px;
+        padding: 0px;
     }
     #vk {
         height: 15px;
